@@ -62,20 +62,28 @@ A **Optivest** é uma plataforma web moderna que permite simular estratégias de
 ### 🔹 1. Clonar o repositório
 
 git clone https://github.com/RodolfoMoreiraa/Optivest.git
+
 cd Optivest
 
 ### 🔹 2. Backend (Django)
 
 cd optivest_backend
+
 python -m venv venv
+
 venv\Scripts\activate se utilizar Windows
+
 pip install -r requirements.txt
+
 python manage.py migrate
+
 python manage.py runserver
 
 ### 🔹 3. Frontend (React)
 
 cd ../optivest-frontend
+
 npm install
+
 npm start
 
