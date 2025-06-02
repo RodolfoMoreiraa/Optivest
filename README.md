@@ -1,4 +1,4 @@
-# 📈 Optivest – Simulador Inteligente de Investimentos
+# 📈 Optivest – Simulador de Estratégias de Investimentos para o StockMarket Português
 
 A **Optivest** é uma plataforma web moderna que permite simular estratégias de investimento com dados reais do mercado. É focada em educação financeira, análise de desempenho e acompanhamento visual de portefólio — tudo com um design elegante e profissional ao estilo das melhores plataformas fintech.
 
