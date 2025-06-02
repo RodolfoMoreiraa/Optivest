@@ -1,0 +1,97 @@
+/* Simulations.css */
+
+.simulations-container {
+  margin: 40px 20px;
+  padding: 40px;
+  border-radius: 25px;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(25px);
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.6);
+  animation: fadeSlideUp 0.8s ease forwards;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  background-color: #1e293b;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.back-button:hover {
+  transform: scale(1.1);
+}
+
+.highlight {
+  font-size: 2.4rem;
+  font-weight: 800;
+  text-align: center;
+  color: #60a5fa;
+  margin-bottom: 40px;
+  text-shadow: 0 0 10px rgba(96, 165, 250, 0.3);
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  color: #f1f5f9;
+}
+
+.data-table th,
+.data-table td {
+  padding: 12px 10px;
+  border: 1px solid rgba(203, 213, 225, 0.2);
+  font-size: 0.95rem;
+}
+
+.data-table thead {
+  background-color: #1e293b;
+}
+
+.data-table tbody tr:hover {
+  background-color: rgba(30, 41, 59, 0.5);
+  transition: background-color 0.3s ease;
+}
+
+.delete-button {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.delete-button:hover {
+  background-color: #dc2626;
+  transform: scale(1.1);
+}
+
+.profit {
+  color: #22c55e;
+  font-weight: bold;
+}
+
+.loss {
+  color: #ef4444;
+  font-weight: bold;
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

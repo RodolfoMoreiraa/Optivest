@@ -1,0 +1,254 @@
+.auth-page {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(circle at center, #0f172a 0%, #020617 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-page::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: repeating-radial-gradient(circle, rgba(255,255,255,0.01) 0px, transparent 60px);
+  animation: pulse 10s linear infinite;
+  z-index: 1;
+}
+
+.auth-page::after {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(99,102,241,0.3), transparent 70%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  border-radius: 50%;
+  filter: blur(100px);
+  animation: pulseGlow 8s infinite ease-in-out;
+  z-index: 0;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.4; }
+  50% { transform: scale(1.03); opacity: 0.6; }
+  100% { transform: scale(1); opacity: 0.4; }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); }
+  50% { transform: translate(-50%, -50%) scale(1.2); }
+}
+
+.auth-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  width: 100%;
+  max-width: 400px;
+  padding: 40px 30px;
+  border-radius: 20px;
+  background: rgba(17, 24, 39, 0.88);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5), 0 0 10px rgba(59, 130, 246, 0.3);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  opacity: 0;
+  animation: fadeSlide 0.8s ease forwards;
+}
+
+
+@keyframes fadeSlide {
+  to {
+    opacity: 1;
+  }
+}
+
+.auth-card h2 {
+  text-align: center;
+  color: #e2e8f0;
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  background: #0f172a;
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  border: 1px solid #334155;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-wrapper svg {
+  fill: #64748b;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.input-wrapper input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #f1f5f9;
+  font-size: 0.95rem;
+}
+
+.input-wrapper:focus-within {
+  border-color: #818cf8;
+  box-shadow: 0 0 0 2px rgba(129, 140, 248, 0.4), 0 0 12px rgba(139, 92, 246, 0.3);
+}
+
+.auth-button {
+  width: 100%;
+  padding: 14px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: white;
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.auth-button::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.15), transparent 70%);
+  transform: rotate(0deg);
+  animation: rotateGlow 6s linear infinite;
+  z-index: 0;
+}
+
+@keyframes rotateGlow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.auth-button:hover {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.6);
+}
+
+.auth-error, .auth-success {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.auth-error {
+  color: #f87171;
+}
+
+.auth-success {
+  color: #34d399;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  border: 1px solid #6366f1;
+  -webkit-text-fill-color: #f1f5f9;
+  transition: background-color 5000s ease-in-out 0s;
+  box-shadow: 0 0 0px 1000px #1e293b inset;
+  font-weight: 500;
+}
+
+input:-webkit-autofill {
+  box-shadow: 0 0 0 1000px #0f172a inset !important;
+  -webkit-text-fill-color: #f1f5f9 !important;
+  transition: background-color 9999s ease-out !important;
+}
+
+
+/* Autofill visual override */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  border: 1px solid #6366f1;
+  -webkit-text-fill-color: #f1f5f9;
+  transition: background-color 5000s ease-in-out 0s;
+  box-shadow: 0 0 0px 1000px #1e293b inset;
+  font-weight: 500;
+  animation: autofill-glow 1s ease-in-out;
+}
+
+/* Autofill animation */
+@keyframes autofill-glow {
+  0% {
+    box-shadow: 0 0 0px 1000px #1e293b inset, 0 0 0px #6366f1;
+  }
+  50% {
+    box-shadow: 0 0 0px 1000px #1e293b inset, 0 0 12px #6366f1;
+  }
+  100% {
+    box-shadow: 0 0 0px 1000px #1e293b inset, 0 0 0px #6366f1;
+  }
+}
+
+.autofill-label {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin-top: 4px;
+  margin-bottom: 12px;
+  padding-left: 4px;
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.autofill-label.hidden {
+  opacity: 0;
+  transform: translateY(-8px);
+  height: 0;
+  overflow: hidden;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Adiciona ao final do ficheiro Login.css */
+.fixed-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

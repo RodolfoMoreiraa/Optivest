@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+
+.profile-page {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 50px 40px;
+  background: rgba(17, 24, 39, 0.5);
+  border-radius: 18px;
+  box-shadow: 0 0 40px rgba(99, 102, 241, 0.3), inset 0 0 15px rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  color: #e2e8f0;
+  text-align: center;
+  position: relative;
+  transition: all 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  animation: fadeInSlideUp 1s ease-out;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  background-color: rgba(30, 41, 59, 0.7);
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.5);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.back-button:hover {
+  transform: scale(1.1);
+  background-color: rgba(30, 41, 59, 0.9);
+}
+
+.profile-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.2rem;
+  color: #8b5cf6;
+  margin-bottom: 30px;
+  text-shadow: 0 0 10px rgba(139, 92, 246, 0.6);
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 25px;
+  box-shadow: 0 0 25px rgba(99, 102, 241, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 3px solid rgba(139, 92, 246, 0.4);
+}
+
+.profile-avatar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 35px rgba(139, 92, 246, 0.7);
+}
+
+.upload-label {
+  background: linear-gradient(135deg, #4f46e5, #8b5cf6);
+  color: white;
+  padding: 10px 22px;
+  border-radius: 14px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
+  font-family: 'Orbitron', sans-serif;
+}
+
+.upload-label:hover {
+  background: linear-gradient(135deg, #6366f1, #a78bfa);
+  box-shadow: 0 0 25px rgba(139, 92, 246, 0.6);
+  transform: scale(1.03);
+}
+
+.profile-card p {
+  font-size: 1.1rem;
+  margin: 10px 0;
+  color: #d1d5db;
+}
+
+.profile-card strong {
+  color: #f9fafb;
+}
+
+@keyframes fadeInSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+

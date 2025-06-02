@@ -1,0 +1,147 @@
+/* InvestmentSimulator.css */
+
+.simulator-container {
+  max-width: 1200px;
+  margin: 60px auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  background: linear-gradient(to bottom right, #0f172a, #1e293b);
+  padding: 50px;
+  border-radius: 20px;
+  color: white;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+}
+
+.simulator-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.simulator-form h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2rem;
+  background: linear-gradient(to right, #4f46e5, #a78bfa);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 18px rgba(99, 102, 241, 0.4);
+  margin-bottom: 30px;
+  animation: fadeSlideUp 1s ease;
+}
+
+.simulator-form .input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  font-weight: 600;
+  color: #cbd5e1;
+  margin-bottom: 6px;
+}
+
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: none;
+  background: #111827;
+  color: white;
+  font-size: 0.95rem;
+  box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.05);
+  transition: all 0.2s ease-in-out;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  outline: 2px solid #3b82f6;
+  background: #1f2937;
+}
+
+.simulator-button {
+  width: 100%;
+  padding: 14px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: white;
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.simulator-button::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.15), transparent 70%);
+  transform: rotate(0deg);
+  animation: rotateGlow 6s linear infinite;
+  z-index: 0;
+}
+
+@keyframes rotateGlow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.simulator-button:hover {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.6);
+}
+
+
+.simulation-result {
+  flex: 1;
+  background: #1e293b;
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid #334155;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.simulation-result h3 {
+  font-size: 1.5rem;
+  color: #60a5fa;
+  margin-bottom: 20px;
+}
+
+.simulation-result p {
+  color: #e2e8f0;
+  font-size: 1rem;
+  margin: 6px 0;
+}
+
+.simulation-chart {
+  margin-top: 30px;
+  background: #334155;
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid #475569;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+.simulation-chart h4 {
+  margin-bottom: 16px;
+  font-weight: 600;
+  color: #cbd5e1;
+  text-align: center;
+}
+
+.simulator-results {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}

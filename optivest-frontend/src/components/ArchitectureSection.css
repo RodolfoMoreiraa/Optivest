@@ -1,0 +1,64 @@
+.architecture-section {
+  background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+  color: white;
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.architecture-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #3b82f6;
+}
+
+.architecture-subtitle {
+  font-size: 1.1rem;
+  color: #94a3b8;
+  margin-bottom: 3rem;
+}
+
+.architecture-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.architecture-card {
+  background-color: #1e293b;
+  padding: 2.5rem;
+  border-radius: 18px;
+  box-shadow: 0 0 45px rgba(0, 0, 0, 0.4);
+  max-width: 520px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(6px);
+}
+
+.architecture-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.6);
+}
+
+.architecture-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+.architecture-card p {
+  font-size: 0.97rem;
+  color: #cbd5e1;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.architecture-card img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: contain;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
