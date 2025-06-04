@@ -51,7 +51,6 @@ A **Optivest** é uma plataforma web moderna que permite simular estratégias de
 | 👤 Gestão de Perfil            | Upload de imagem, dados pessoais |
 | 📈 Simulador de Investimentos  | Estratégias DCA, Lump Sum, DCA + DIV com parâmetros customizáveis |
 | 📊 Resultados Visuais          | Gráficos interativos de desempenho |
-| 🧠 Análise Inteligente         | Frases automáticas com base nos dados simulados |
 | ⭐ Favoritos (Watchlist)       | Marcar ações e ver numa secção especial |
 | 💡 Landing Page informativa   | Vídeo, arquitetura, FAQ e funcionalidades destacadas |
 
