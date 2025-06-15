@@ -86,3 +86,15 @@ npm install
 
 npm start
 
+## 📸 Exemplos Visuais
+
+### 💻 Dashboard
+
+![Dashboard da Optivest](./assets/optifront.png)
+
+### 📊 Simulador de Investimentos
+
+![Simulador](./assets/postsimulation.png)
+
+
+
